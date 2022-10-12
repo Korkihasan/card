@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="normalize.css"> 
     <link rel="stylesheet" href="card.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>kart bilgileri</title>
 </head>
 <body>
@@ -18,34 +19,20 @@
 </div>
 
 
-
-
 <div class="container">
-
     <div class="bankcard">
         <div class="cardfront">
-            <img class="cip" src="images/Untitled-2.png">
-            <br>
+                <img class="cip" src="images/Untitled-2.png"><br>
             <div class="nameanddate">
-            <label id="iban" class="iban">9195 6489 6389 101E</label>
-            
+                <label id="iban" class="iban card-number">0000 0000 0000 0000</label>
                 <label id="name1">Jane Appleseed</label>
-
                 <div>
-                    <label id="mm1">00</label>
-                    <labal>/</labal>
-                    <label id="yy1">00</label>
+                    <label id="mm1">00</label> <labal>/</labal> <label id="yy1">00</label>
                 </div>
             </div>
         </div>
-
-
-
-
         <div class="cardback"><label id="cvc1" class="cvc">000</label></div>
-
-        </div>
-
+    </div>
 
 
 
@@ -53,16 +40,17 @@
     <div   class="cardinformation">
 
         <label>CARDHOLDER NAME</label><br/>
-        <input id="name" class="card cardheight" placeholder="e.g. Jane Appleseed" type="text"><br/>
+        <input id="name"        class="card cardheight"   placeholder="e.g. Jane Appleseed"       type="text"><br/>
 
         <label>CARD NUMBER</label><br/>
-        <input id="cardnumber"  class="card cardheight "  placeholder="e.g. 1234 5678 9123 0000 " type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" ><br/>
+        <input id="cardnumber"  class="card cardheight js-card-number ibanonlynumber"       placeholder="e.g. 1234 5678 9123 0000 " type="text" autocomplete="off" maxlength="16" pattern="[0-9]" required><br/>
 
         <label class="exp">EXP. DATE (MM/YY)</label> <label>CVC</label><br/>
-        <input id="mm" class="cardheight cardwight1"  pattern="\d*" max="2" placeholder="MM" type="number">
-        <input id="yy" class="cardheight cardwight1"  maxlength="4" placeholder="YY" type="number">
-        <input id="cvc" class="cardheight cardwight2" maxlength="3" placeholder="e.g. 123" type="number"><br/>
-        <button>Confirm</button>
+        <input id="mm"  class="cardheight cardwight1 mmonlynumber"  placeholder="MM"        maxlength="2"  type="text" autocomplete="off"  required>
+        <input id="yy"  class="cardheight cardwight1 yyonlynumber"  placeholder="YY"        maxlength="2"  type="text" autocomplete="off"  required>
+        <input id="cvc" class="cardheight cardwight2 cvconlynumber" placeholder="e.g. 123"  maxlength="3"  type="text" autocomplete="off"  required>
+        
+        <br/><button>Confirm</button>
     </div>
 </div>
 
@@ -72,13 +60,47 @@
 
 
 <script>
+
+
+
+
+ $(function(){
+   $(".mmonlynumber").keypress(function (e) {
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+     
+      return false;
+    }
+   });
+});
+$(function(){
+   $(".yyonlynumber").keypress(function (e) {
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+     
+      return false;
+    }
+   });
+});
+$(function(){
+   $(".cvconlynumber").keypress(function (e) {
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+     
+      return false;
+    }
+   });
+});
+$(function(){
+   $(".ibanonlynumber").keypress(function (e) {
+     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+     
+      return false;
+    }
+   });
+});
  
 
 
-  
 
 
-   
 
 
  document.getElementById("mm").addEventListener("keyup", myFunction4);
@@ -93,12 +115,10 @@
    document.getElementById("cvc").addEventListener("keyup", myFunction2);
    var b = document.getElementById("cvc1")
    function myFunction2(event) {b.textContent=event.target.value;}
-
    
    document.getElementById("cardnumber").addEventListener("keyup", myFunction1);
    var a = document.getElementById("iban")
    function myFunction1(event) {a.textContent=event.target.value;}
-
 
 
    document.getElementById("name").addEventListener("keyup", myFunction);
@@ -118,9 +138,6 @@
 
 </body>
 </html>
-
-
-
 
 
 
