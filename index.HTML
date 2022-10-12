@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css"> 
+    <link rel="stylesheet" href="card.css">
+    <title>kart bilgileri</title>
+</head>
+<body>
+
+
+
+<div class="wallpaper">
+    <div class="destopfoto"></div>
+    <div class="destopfotohelper"></div>
+</div>
+
+
+
+
+<div class="container">
+
+    <div class="bankcard">
+        <div class="cardfront">
+            <img class="cip" src="images/Untitled-2.png">
+            <br>
+            <div class="nameanddate">
+            <label id="iban" class="iban">9195 6489 6389 101E</label>
+            
+                <label id="name1">Jane Appleseed</label>
+
+                <div>
+                    <label id="mm1">00</label>
+                    <labal>/</labal>
+                    <label id="yy1">00</label>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="cardback"><label id="cvc1" class="cvc">000</label></div>
+
+        </div>
+
+
+
+
+
+    <div   class="cardinformation">
+
+        <label>CARDHOLDER NAME</label><br/>
+        <input id="name" class="card cardheight" placeholder="e.g. Jane Appleseed" type="text"><br/>
+
+        <label>CARD NUMBER</label><br/>
+        <input id="cardnumber"  class="card cardheight "  placeholder="e.g. 1234 5678 9123 0000 " type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" ><br/>
+
+        <label class="exp">EXP. DATE (MM/YY)</label> <label>CVC</label><br/>
+        <input id="mm" class="cardheight cardwight1"  pattern="\d*" max="2" placeholder="MM" type="number">
+        <input id="yy" class="cardheight cardwight1"  maxlength="4" placeholder="YY" type="number">
+        <input id="cvc" class="cardheight cardwight2" maxlength="3" placeholder="e.g. 123" type="number"><br/>
+        <button>Confirm</button>
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+ 
+
+
+  
+
+
+   
+
+
+ document.getElementById("mm").addEventListener("keyup", myFunction4);
+   var d = document.getElementById("mm1")
+   function myFunction4(event) {d.textContent=event.target.value;}
+
+   document.getElementById("yy").addEventListener("keyup", myFunction3);
+   var c = document.getElementById("yy1")
+   function myFunction3(event) {c.textContent=event.target.value;}
+
+
+   document.getElementById("cvc").addEventListener("keyup", myFunction2);
+   var b = document.getElementById("cvc1")
+   function myFunction2(event) {b.textContent=event.target.value;}
+
+   
+   document.getElementById("cardnumber").addEventListener("keyup", myFunction1);
+   var a = document.getElementById("iban")
+   function myFunction1(event) {a.textContent=event.target.value;}
+
+
+
+   document.getElementById("name").addEventListener("keyup", myFunction);
+   var result = document.getElementById("name1")
+   function myFunction(event) {result.textContent=event.target.value;}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
