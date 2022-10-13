@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
 
-body{font-family:'Space Grotesk',sans-serif;  font-weight: 600; background-color:rgb(235,235,235);}
+body{font-family:'Space Grotesk',sans-serif;  font-weight: 600;}
 
 
 /*background-foto*/
@@ -31,10 +31,10 @@ body{font-family:'Space Grotesk',sans-serif;  font-weight: 600; background-color
 /*card-input*/
 .card-information{color:rgb(70, 70, 70);}
 .card{width:530px;  border-radius:8px;}
-.card-input{height:50px;  margin-bottom:25px; margin-top:10px;}
+.card-input{height:50px;  margin-bottom:25px; margin-top:10px;border:2px solid gainsboro;box-sizing: border-box;padding-left:10px;}
 .card-mm-yy-w{width:90px; margin-right:10px;  border-radius:8px;}
-.card-cvc-w{width:306px;  border-radius:8px;}
-button{width:538px; height:70px;  border:none;  border-radius:10px; cursor:pointer; background-color:hsl(278, 68%, 11%);  color:white;  font-size:20px; font-weight:500;}
+.card-cvc-w{width:322px;  border-radius:8px;}
+button{width:530px; height:70px;  border:none;  border-radius:10px; cursor:pointer; background-color:hsl(278, 68%, 11%);  color:white;  font-size:20px; font-weight:500;}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
 input[type="text"]{font-family: 'Space Grotesk', sans-serif;font-weight: 600;}
