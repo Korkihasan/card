@@ -1,53 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap');
 
+body{font-family:'Space Grotesk',sans-serif;  font-weight: 600; background-color:rgb(235,235,235);}
 
 
-
-body{font-family: 'Space Grotesk', sans-serif;font-weight: 600;background-color: rgb(235, 235, 235);}
-
+/*background-foto*/
 .wallpaper{display: flex;}
 .destopfoto{width:600px;height:100vh;background-image:url(images/bg-main-desktop.png);background-size: cover;margin-right:900px; position:absolute;}
 
+
+/*card*/
 .container{display:flex;justify-content:center;align-items: center;flex-wrap: wrap;position:relative;height:100vh;}
 .bankcard{color: white; width:45%;}
-.cardfront{width:447px;height:245px;box-sizing: border-box;border-radius:12px;padding:25px;
-            background-color:red;margin-left:40px;
-            background: linear-gradient(120deg, rgb(255, 0, 0),rgb(102, 51, 255)  80.100% ),
-            linear-gradient(336deg, rgb(0, 255, 0),rgb(204, 51, 204)  100.100% ),
-            linear-gradient(127deg, rgb(0, 0, 255),rgb(102, 153, 255)  100.100% ),
-            linear-gradient(336deg, rgba(0,0,255,0),rgb(204, 102, 102)  100.100% );}
+.cardfront{width:447px; height:245px; box-sizing:border-box;  border-radius:12px; padding:25px; margin-left:40px; background-color:red;
+           background:linear-gradient(120deg, rgb(255,0,0)   ,rgb(102,51 ,255)   80.100% ),
+                      linear-gradient(336deg, rgb(0,255,0)   ,rgb(204,51 ,204)  100.100% ),
+                      linear-gradient(127deg, rgb(0,0,255)   ,rgb(102,153,255)  100.100% ),
+                      linear-gradient(336deg, rgb(0,0,255,0) ,rgb(204,102,102)  100.100% );}
+
+.cardback{width:447px;  height:245px; display: flex;  align-items:center; justify-content:end;  margin-left:120px;  padding:50px; box-sizing:border-box;  margin-top:50px;
+          background-image:url(images/bg-card-back.png);}
 
 
-
-
-.cardback{width:447px;height:245px;background-image: url(images/bg-card-back.png);display: flex;align-items:center;justify-content: end;margin-left: 120px;
-        padding:50px;box-sizing: border-box;margin-top:50px;}
-
-
+/*on-card*/
 .cip{width:50px;}
-.iban{font-size: 26px;width:447px;}
-.nameanddate{display:flex;align-items:flex-end;justify-content: space-between;height:100%;flex-wrap: wrap;align-content: center;margin-top:10px;}
+.iban{font-size:26px; width:447px;}
+.name-and-date{display:flex;  align-items:flex-end; justify-content:space-between;  flex-wrap:wrap; align-content:center;  height:100%; margin-top:10px;}
 .cvc{text-align:right;}
 
-.cardinformation{color:rgb(70, 70, 70);}
-.card{width:530px;border-radius:8px;}
-.cardheight{height: 50px;margin-bottom:25px;margin-top:10px;}
-.cardwight1{width:90px;margin-right:10px;border-radius:8px;}
-.cardwight2{width:306px;border-radius:8px;}
-.exp{margin-right:0px;}
 
-button{width:538px;height:70px;border:none;border-radius:10px;cursor: pointer;background-color:hsl(278, 68%, 11%);color:white;font-size:20px;font-weight:500;}
-
+/*card-input*/
+.card-information{color:rgb(70, 70, 70);}
+.card{width:530px;  border-radius:8px;}
+.card-input{height:50px;  margin-bottom:25px; margin-top:10px;}
+.card-mm-yy-w{width:90px; margin-right:10px;  border-radius:8px;}
+.card-cvc-w{width:306px;  border-radius:8px;}
+button{width:538px; height:70px;  border:none;  border-radius:10px; cursor:pointer; background-color:hsl(278, 68%, 11%);  color:white;  font-size:20px; font-weight:500;}
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;}
-
-  input[type="text"]
-{font-family: 'Space Grotesk', sans-serif;font-weight: 600;}
-input[type="tel"]
-{font-family: 'Space Grotesk', sans-serif;font-weight: 600;}
-input[type="number"]
-{font-family: 'Space Grotesk', sans-serif;font-weight: 600;}
+input::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;}
+input[type="text"]{font-family: 'Space Grotesk', sans-serif;font-weight: 600;}
 
 
